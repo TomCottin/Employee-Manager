@@ -1,6 +1,6 @@
 package com.example.employeemanager.services;
 
-import com.example.employeemanager.repository.EmployeeRepository;
+import com.example.employeemanager.repository.IEmployeeRepository;
 import com.example.employeemanager.models.Employee;
 import com.example.employeemanager.exceptions.UserNotFoundException;
 
@@ -11,12 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmployeeService {
+public class EmployeeService implements IEmployeeService {
     
-    private final EmployeeRepository employeeRepository;
+    private final IEmployeeRepository employeeRepository;
 
     @Autowired
-    public EmployeeService(EmployeeRepository employeeRepository) {
+    public EmployeeService(IEmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
     

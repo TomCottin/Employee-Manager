@@ -3,7 +3,7 @@ package com.example.employeemanager;
 import java.util.List;
 
 import com.example.employeemanager.models.Employee;
-import com.example.employeemanager.repository.EmployeeRepository;
+import com.example.employeemanager.repository.IEmployeeRepository;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class EmployeeConfig {
     
     @Bean
-    CommandLineRunner commandLineRunner(EmployeeRepository employeeRepository) {
+    CommandLineRunner commandLineRunner(IEmployeeRepository employeeRepository) {
         return args -> {
             Employee tom = new Employee(
                 null,

@@ -1,6 +1,6 @@
 package com.example.employeemanager.controllers;
 
-import com.example.employeemanager.services.EmployeeService;
+import com.example.employeemanager.services.IEmployeeService;
 import com.example.employeemanager.models.Employee;
 
 import java.util.List;
@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequestMapping(path = "/employee")
 public class EmployeeController {
 
-    private final EmployeeService employeeService;
+    private final IEmployeeService employeeService;
 
-    public EmployeeController(EmployeeService employeeService) {
+    public EmployeeController(IEmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 
